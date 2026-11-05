@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2.0,
+    "id": "mosicoy_kpi_wallboard",
+    "type": "widget",
+    "name": "Mosicoy KPI Wallboard",
+    "namespace": "MosicoyKpiWallboard",
+    "version": "1.0.1",
+    "author": "Mostafa Shorgashti",
+    "url": "https://github.com/Mostafa65sh",
+    "actions": {
+        "widget.mosicoy_kpi_wallboard.view": {
+            "class": "WidgetView"
+        }
+    },
+    "widget": {
+        "js_class": "WidgetMosicoyKpiWallboard"
+    },
+    "assets": {
+        "js": [
+            "echarts.min.js",
+            "class.widget.js"
+        ],
+        "css": [
+            "widget.css"
+        ]
+    },
+    "description": "Mosicoy Zabbix Widgets — Modern widgets by Mostafa Shorgashti (m.shorgashti@gmail.com)"
+}

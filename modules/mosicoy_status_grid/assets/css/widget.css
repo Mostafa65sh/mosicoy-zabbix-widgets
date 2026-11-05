@@ -1,0 +1,48 @@
+.mosicoy-status-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: inherit;
+}
+.mosicoy-header { display: flex; justify-content: space-between; align-items: center; padding: 0 2px 10px; border-bottom: 1px solid rgba(128, 128, 128, 0.15); flex-shrink: 0; margin-bottom: 10px; gap: 10px; flex-wrap: wrap; }
+.mosicoy-header-title { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
+.mosicoy-header-count { font-size: 11px; opacity: 0.6; margin-top: 2px; }
+.mosicoy-header-right { display: flex; gap: 6px; flex-wrap: wrap; }
+.mosicoy-pill { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 14px; font-size: 11px; font-weight: 600; background: rgba(128, 128, 128, 0.1); border: 1px solid transparent; }
+.mosicoy-pill-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.pill-ok { color: #22c55e; border-color: rgba(34, 197, 94, 0.3); background: rgba(34, 197, 94, 0.1); }
+.pill-ok .mosicoy-pill-dot { background: #22c55e; }
+.pill-warn { color: #f59e0b; border-color: rgba(245, 158, 11, 0.3); background: rgba(245, 158, 11, 0.1); }
+.pill-warn .mosicoy-pill-dot { background: #f59e0b; }
+.pill-crit { color: #ef4444; border-color: rgba(239, 68, 68, 0.3); background: rgba(239, 68, 68, 0.1); }
+.pill-crit .mosicoy-pill-dot { background: #ef4444; animation: pulse-dot 1.5s infinite; }
+@keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
+.mosicoy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; flex: 1; overflow-y: auto; overflow-x: hidden; align-content: start; padding-right: 4px; }
+.mosicoy-grid::-webkit-scrollbar { width: 6px; }
+.mosicoy-grid::-webkit-scrollbar-thumb { background: rgba(128, 128, 128, 0.3); border-radius: 3px; }
+.mosicoy-cell { position: relative; background: var(--cell-bg, #3a4553); border-radius: 8px; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease; overflow: hidden; display: flex; min-width: 0; }
+.mosicoy-cell:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); z-index: 2; }
+.mosicoy-cell-bar { width: 4px; background: var(--cell-bar, #97AAB3); flex-shrink: 0; }
+.mosicoy-cell-body { flex: 1; min-width: 0; padding: 8px 10px; display: flex; flex-direction: column; gap: 4px; }
+.mosicoy-cell-top { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.mosicoy-cell-name { font-weight: 600; font-size: 12px; line-height: 1.2; color: var(--cell-fg, #e8e8ec); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; min-width: 0; }
+.mosicoy-cell-badge { font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 8px; background: rgba(0, 0, 0, 0.4); color: var(--cell-fg, #e8e8ec); flex-shrink: 0; min-width: 18px; text-align: center; }
+.mosicoy-cell-meta { font-size: 10px; opacity: 0.75; color: var(--cell-fg, #e8e8ec); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mosicoy-cell-ok { color: #22c55e !important; opacity: 0.9; }
+.mosicoy-cell.pulse { animation: pulse-cell 2.2s infinite; }
+@keyframes pulse-cell { 0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5); } 50% { box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); } }
+.cell-compact .mosicoy-cell-body { padding: 6px 8px; gap: 2px; }
+.cell-compact .mosicoy-cell-name { font-size: 11px; }
+.cell-compact .mosicoy-cell-meta { font-size: 9px; }
+.cell-detailed .mosicoy-cell-body { padding: 12px 14px; gap: 6px; }
+.cell-detailed .mosicoy-cell-name { font-size: 13px; }
+.cell-detailed .mosicoy-cell-meta { font-size: 11px; }
+.cell-detailed .mosicoy-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+.mosicoy-empty { flex: 1; display: flex; align-items: center; justify-content: center; opacity: 0.5; font-size: 13px; text-align: center; padding: 20px; }
+.mosicoy-truncated { flex-shrink: 0; text-align: center; font-size: 10px; opacity: 0.55; padding: 6px 0 0; font-style: italic; }

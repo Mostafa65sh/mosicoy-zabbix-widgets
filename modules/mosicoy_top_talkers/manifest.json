@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2.0,
+    "id": "mosicoy_top_talkers",
+    "type": "widget",
+    "name": "Mosicoy Top Talkers",
+    "namespace": "MosicoyTopTalkers",
+    "version": "1.0.1",
+    "author": "Mostafa Shorgashti",
+    "url": "https://github.com/Mostafa65sh",
+    "actions": {
+        "widget.mosicoy_top_talkers.view": {
+            "class": "WidgetView"
+        }
+    },
+    "widget": {
+        "js_class": "WidgetMosicoyTopTalkers"
+    },
+    "assets": {
+        "js": [
+            "class.widget.js"
+        ],
+        "css": [
+            "widget.css"
+        ]
+    },
+    "description": "Mosicoy Zabbix Widgets — Modern widgets by Mostafa Shorgashti (m.shorgashti@gmail.com)"
+}

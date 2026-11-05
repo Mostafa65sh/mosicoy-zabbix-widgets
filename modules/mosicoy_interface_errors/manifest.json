@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2.0,
+    "id": "mosicoy_interface_errors",
+    "type": "widget",
+    "name": "Mosicoy Interface Errors",
+    "namespace": "MosicoyInterfaceErrors",
+    "version": "1.0.1",
+    "author": "Mostafa Shorgashti",
+    "url": "https://github.com/Mostafa65sh",
+    "actions": {
+        "widget.mosicoy_interface_errors.view": {
+            "class": "WidgetView"
+        }
+    },
+    "widget": {
+        "js_class": "WidgetMosicoyInterfaceErrors"
+    },
+    "assets": {
+        "js": [
+            "class.widget.js"
+        ],
+        "css": [
+            "widget.css"
+        ]
+    },
+    "description": "Mosicoy Zabbix Widgets — Modern widgets by Mostafa Shorgashti (m.shorgashti@gmail.com)"
+}

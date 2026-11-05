@@ -1,0 +1,50 @@
+.mosicoy-gauge-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.mosicoy-gauge-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; height: 100%; overflow-y: auto; align-content: start; padding-right: 4px; }
+.mosicoy-gauge-grid::-webkit-scrollbar { width: 5px; }
+.mosicoy-gauge-grid::-webkit-scrollbar-thumb { background: rgba(128, 128, 128, 0.3); border-radius: 3px; }
+.mosicoy-gauge-card { display: flex; flex-direction: column; align-items: center; padding: 10px 8px; background: rgba(128, 128, 128, 0.08); border: 1px solid rgba(128, 128, 128, 0.15); border-radius: 12px; cursor: pointer; transition: all 0.2s ease; min-width: 0; }
+.mosicoy-gauge-card:hover { background: rgba(128, 128, 128, 0.15); border-color: rgba(128, 128, 128, 0.4); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+.gauge-svg-wrap { position: relative; width: 100%; max-width: 140px; aspect-ratio: 1; margin-bottom: 6px; }
+.gauge-svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.gauge-track, .gauge-fill { fill: none; stroke-width: 10; stroke-linecap: round; transform: rotate(135deg); transform-origin: 50% 50%; }
+.gauge-track { stroke: rgba(128, 128, 128, 0.2); stroke-dasharray: 198 66; }
+[theme="dark"] .gauge-track, .theme-dark .gauge-track { stroke: rgba(255, 255, 255, 0.1); }
+.gauge-fill { stroke-dasharray: 0 264; transition: stroke-dasharray 1.2s cubic-bezier(0.22, 1, 0.36, 1), stroke 0.6s ease; }
+.gauge-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; padding-bottom: 8%; }
+.gauge-value { font-size: 22px; font-weight: 800; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; color: inherit; }
+.gauge-unit { font-size: 11px; opacity: 0.7; margin-top: 3px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+.gauge-name { font-size: 12px; font-weight: 600; text-align: center; line-height: 1.3; color: inherit; width: 100%; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin-bottom: 4px; }
+.gauge-host { font-size: 10px; opacity: 0.6; text-align: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; margin-bottom: 6px; }
+.gauge-delta { font-size: 11px; font-weight: 700; text-align: center; min-height: 16px; margin-bottom: 4px; font-variant-numeric: tabular-nums; }
+.delta-up { color: #22c55e; } .delta-down { color: #ef4444; } .delta-neutral { color: #888; opacity: 0.6; font-weight: 500; }
+.gauge-status { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 8px; border-radius: 10px; }
+.status-live { color: #22c55e; background: rgba(34, 197, 94, 0.15); }
+.status-stale { color: #f59e0b; background: rgba(245, 158, 11, 0.15); }
+.gauge-critical .gauge-fill { animation: gauge-pulse 2s ease-in-out infinite; }
+@keyframes gauge-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+.gauge-critical { border-color: rgba(239, 68, 68, 0.4); animation: card-glow 2.4s ease-in-out infinite; }
+@keyframes card-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } 50% { box-shadow: 0 0 0 5px rgba(239, 68, 68, 0.1); } }
+.gauge-stale { opacity: 0.65; } .gauge-no-data .gauge-fill { stroke-dasharray: 0 264 !important; } .gauge-no-data .gauge-value { opacity: 0.4; }
+.style-compact .mosicoy-gauge-grid { grid-template-columns: repeat(auto-fit, minmax(95px, 1fr)); gap: 6px; }
+.style-compact .mosicoy-gauge-card { padding: 6px 4px; }
+.style-compact .gauge-svg-wrap { max-width: 85px; margin-bottom: 2px; }
+.style-compact .gauge-value { font-size: 16px; } .style-compact .gauge-unit { font-size: 9px; margin-top: 1px; }
+.style-compact .gauge-name { font-size: 10px; -webkit-line-clamp: 1; margin-bottom: 0; }
+.style-compact .gauge-host { font-size: 8px; margin-bottom: 2px; }
+.style-compact .gauge-delta { display: none; } .style-compact .gauge-status { font-size: 8px; padding: 1px 4px; }
+.style-detailed .mosicoy-gauge-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+.style-detailed .mosicoy-gauge-card { padding: 14px 10px; } .style-detailed .gauge-svg-wrap { max-width: 180px; }
+.style-detailed .gauge-value { font-size: 30px; } .style-detailed .gauge-unit { font-size: 14px; }
+.style-detailed .gauge-name { font-size: 13px; } .style-detailed .gauge-host { font-size: 11px; } .style-detailed .gauge-delta { font-size: 12px; }
+.mosicoy-gauge-empty { grid-column: 1 / -1; display: flex; align-items: center; justify-content: center; height: 100%; text-align: center; opacity: 0.6; font-size: 14px; padding: 20px; }

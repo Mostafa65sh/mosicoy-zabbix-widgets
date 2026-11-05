@@ -1,0 +1,37 @@
+.mosicoy-netmap-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: inherit;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.mosicoy-netmap-chart {
+    flex: 1;
+    min-height: 120px;
+    width: 100%;
+    position: relative;
+}
+
+.mosicoy-netmap-chart canvas { display: block; }
+
+.mosicoy-netmap-footer {
+    flex-shrink: 0;
+    display: flex;
+    gap: 14px;
+    padding: 6px 4px 0;
+    border-top: 1px solid rgba(128, 128, 128, 0.12);
+    font-size: 11px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nm-stat { opacity: 0.85; }
+.nm-stat b { font-weight: 700; font-size: 12px; }
+.nm-crit b { color: #ef4444; }
+.nm-hint { opacity: 0.4; font-size: 10px; margin-left: 8px; }

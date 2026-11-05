@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2.0,
+    "id": "mosicoy_radar_compare",
+    "type": "widget",
+    "name": "Mosicoy Radar Compare",
+    "namespace": "MosicoyRadarCompare",
+    "version": "1.0.1",
+    "author": "Mostafa Shorgashti",
+    "url": "https://github.com/Mostafa65sh",
+    "actions": {
+        "widget.mosicoy_radar_compare.view": {
+            "class": "WidgetView"
+        }
+    },
+    "widget": {
+        "js_class": "WidgetMosicoyRadarCompare"
+    },
+    "assets": {
+        "js": [
+            "echarts.min.js",
+            "class.widget.js"
+        ],
+        "css": [
+            "widget.css"
+        ]
+    },
+    "description": "Mosicoy Zabbix Widgets — Modern widgets by Mostafa Shorgashti (m.shorgashti@gmail.com)"
+}

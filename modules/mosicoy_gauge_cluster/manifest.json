@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2.0,
+    "id": "mosicoy_gauge_cluster",
+    "type": "widget",
+    "name": "Mosicoy Gauge Cluster",
+    "namespace": "MosicoyGaugeCluster",
+    "version": "1.0.3",
+    "author": "Mostafa Shorgashti",
+    "actions": {
+        "widget.mosicoy_gauge_cluster.view": {
+            "class": "WidgetView"
+        }
+    },
+    "widget": {
+        "js_class": "WidgetMosicoyGaugeCluster"
+    },
+    "assets": {
+        "js": [
+            "class.widget.js"
+        ],
+        "css": [
+            "widget.css"
+        ]
+    },
+    "url": "https://github.com/Mostafa65sh",
+    "description": "Mosicoy Zabbix Widgets — Modern widgets by Mostafa Shorgashti (m.shorgashti@gmail.com)"
+}

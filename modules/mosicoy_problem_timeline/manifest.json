@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2.0,
+    "id": "mosicoy_problem_timeline",
+    "type": "widget",
+    "name": "Mosicoy Problem Timeline",
+    "namespace": "MosicoyProblemTimeline",
+    "version": "1.0.1",
+    "author": "Mostafa Shorgashti",
+    "url": "https://github.com/Mostafa65sh",
+    "actions": {
+        "widget.mosicoy_problem_timeline.view": {
+            "class": "WidgetView"
+        }
+    },
+    "widget": {
+        "js_class": "WidgetMosicoyProblemTimeline"
+    },
+    "assets": {
+        "js": [
+            "class.widget.js"
+        ],
+        "css": [
+            "widget.css"
+        ]
+    },
+    "description": "Mosicoy Zabbix Widgets — Modern widgets by Mostafa Shorgashti (m.shorgashti@gmail.com)"
+}
